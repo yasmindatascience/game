@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Runner no GitHub Pages</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <h1>Runner</h1>
+      <div class="hud">
+        <div>Pontos: <span id="score">0</span></div>
+        <div>Recorde: <span id="best">0</span></div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <canvas id="game" width="900" height="360"></canvas>
+
+      <div class="help">
+        <p><b>Controles:</b> Espaço / ↑ / clique = pular • R = reiniciar</p>
+      </div>
+
+      <div class="overlay" id="overlay">
+        <div class="card">
+          <h2 id="overlayTitle">Runner</h2>
+          <p id="overlayText">Clique ou aperte Espaço para começar.</p>
+          <button id="startBtn">Jogar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./game.js"></script>
+</body>
+</html>
