@@ -1,0 +1,106 @@
+:root {
+  --bg: #0b1020;
+  --panel: #121a33;
+  --text: #e9ecf5;
+  --muted: #aab2d5;
+  --accent: #7c5cff;
+  --danger: #ff4d6d;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: radial-gradient(1200px 500px at 50% -100px, #1b2a66 0%, var(--bg) 55%);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+.top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.top h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+.hud {
+  display: flex;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.hud span { color: var(--text); font-weight: 700; }
+
+.panel {
+  position: relative;
+  margin-top: 14px;
+  background: color-mix(in srgb, var(--panel) 90%, black 10%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+}
+
+#game {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.12));
+}
+
+.help {
+  padding: 10px 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(6px);
+}
+
+.card {
+  width: min(420px, 92%);
+  background: rgba(18,26,51,0.92);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+}
+
+.card p {
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 800;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 70%, white 30%));
+  cursor: pointer;
+}
+button:active { transform: translateY(1px); }
